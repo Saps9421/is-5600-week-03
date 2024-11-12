@@ -33,7 +33,6 @@ function respondEcho(req, res) {
         backwards: input.split('').reverse().join(''),
     }));
 }
-
 function chatApp(req, res){
     res.sendFile(path.join(__dirname, '/chat.html'));
 }
