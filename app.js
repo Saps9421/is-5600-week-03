@@ -20,7 +20,6 @@ function respondNotFound(req, res) {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('Not Found');
 }
-
 function respondEcho(req, res) {
     const urlObj = new URL(req.url, `http://${req.headers.host}`);
     const input = urlObj.searchParams.get('input') || '';
@@ -33,7 +32,6 @@ function respondEcho(req, res) {
         backwards: input.split('').reverse().join(''),
     }));
 }
-
 function chatApp(req, res){
     res.sendFile(path.join(__dirname, '/chat.html'));
 }
